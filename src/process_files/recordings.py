@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 
 from src.model_tasks.transcribe import transcribe 
+from src.model_tasks.obidian_format import obsidian_format
 from src.settings import Settings
 
 def process_all_recordings():
@@ -12,7 +13,9 @@ def process_all_recordings():
 
 def process_recording(recording_path):
     # TODO: Add summary section, title, Obsidian links, etc
-    return transcribe(recording_path)
+    transcript = transcribe(recording_path)
+    formatted_transcript = obsidian_format(transcript)
+    return formatted_transcript
 
 def save_transcript(transcript_name, transcript):
     file_name = f"{Settings.transcript_location()}/{transcript_name}.md"

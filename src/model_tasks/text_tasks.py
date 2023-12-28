@@ -8,5 +8,12 @@ class TextTaskData:
     current_state: str | None = None
     time: datetime = datetime.utcnow()
 
-def make_text_task(make_prompt: Callable[[TextTaskData], str]):
-    def text_task(task_data: TextTaskData, )
+@dataclass
+class TextModel:
+    model_name: str
+    max_tokens: int
+
+def make_text_task(make_prompt: Callable[[TextTaskData], str], text_model):
+    def text_task(task_data: TextTaskData, ):
+        prompt = make_prompt(task_data)
+        
