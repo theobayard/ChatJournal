@@ -1,0 +1,3 @@
+from src.process_files.recordings import process_all_recordings
+
+process_all_recordings()

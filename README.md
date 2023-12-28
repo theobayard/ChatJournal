@@ -10,4 +10,4 @@ An interactive journal/memoir creator using LLMs
 2. Add `export OPENAI_API_KEY='<your api key>'` to your shell source
 3. install decencies: `pipenv install`
 4. open pipenv shell: `pipenv shell`
-5. run program: `./chat_journal.py`
+5. run program: `python ./chat_journal.py`
