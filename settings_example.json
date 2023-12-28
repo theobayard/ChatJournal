@@ -1,0 +1,4 @@
+{
+    "recordings_location": "/path/to/audio/recordings/to/ingest",
+    "transcript_location": "/path/to/desired/transcript/output"
+}
